@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unit Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Unit Converter </h1>
+
+<input type="number" id="value" placeholder="Enter value">
+
+<br>
+
+<button onclick="cmToM()">CM to M</button>
+<button onclick="mToCm()">M to CM</button>
+<button onclick="mToKm()">M to KM</button>
+<button onclick="kmToM()">KM to M</button>
+
+<h2 id="convertResult"></h2>
+
+<a href="toolspage.HTML">
+<button>Back</button>
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function cmToM(){
+let value = Number(document.getElementById("value").value);
+document.getElementById("convertResult").innerHTML =
+(value / 100) + " metre";
+}
+
+function mToCm(){
+let value = Number(document.getElementById("value").value);
+document.getElementById("convertResult").innerHTML =
+(value * 100) + " cm";
+}
+
+function mToKm(){
+let value = Number(document.getElementById("value").value);
+document.getElementById("convertResult").innerHTML =
+(value / 1000) + " km";
+}
+
+function kmToM(){
+let value = Number(document.getElementById("value").value);
+document.getElementById("convertResult").innerHTML =
+(value * 1000) + " metre";
+}
+
+</script>
+
+</body>
+</html>
